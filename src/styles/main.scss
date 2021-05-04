@@ -1,0 +1,11 @@
+/* SCSS imports */
+@import '-/variables/variables.scss';
+@import '-/variables/gridsVariables.scss';
+@import '-/utils/grids.scss';
+/* import your style files below */
+/* all components files */
+@import '-/components/texts.scss';
+/* all layout files */
+
+/* make sure this import stayed below all */
+@import '-/utils/globalClass.scss';

@@ -1,0 +1,20 @@
+/* Grid variables. Feel free to modidy them to fit your design */
+$xlBP : 1200px;
+$deskBP : 1000px;
+$tabletBP : 600px;
+
+$deskColumnGap : 50px;
+$deskRowGap : 8px;
+$tabletColumnGap : 50px;
+$tabletRowGap : 8px;
+$mobileColumnGap : 50px;
+$mobileRowGap : 8px;
+
+$xlSidePadding : calc((100vw - #{$xlBP})/2);
+$deskSidePadding : 20vw; 
+$tabletSidePadding : 10vw;
+$mobileSidePadding : 15vw;
+
+$deskNmOfColumns : 12;
+$tabletNmOfColumns : 8;
+$mobileNmOfColumns : 4;

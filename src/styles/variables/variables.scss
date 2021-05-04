@@ -1,0 +1,49 @@
+/* imports */
+
+/* FONTS */
+$font--1 : 'Montserrat', sans-serif;
+$font--2 : 'Cinzel Decorative', cursive;
+
+/* FONT SIZE */
+//the ratio is 1.333.
+//you can just chose fontsize-r size and others will adapt automatically
+$fontsize--s : 0.75rem; //12px if $fontsize--regular id 16
+$fontsize--r : 16px;
+$fontsize--m : 1.333rem; //21.33px 
+$fontsize--l : 1.777rem; //28.43px
+$fontsize--xl : 2.369rem; //37.90
+$fontsize--xxl : 3.157rem; //50.52
+$fontsize--xxxl: 4.209rem; //67.34px
+$fontsize--huge : 5.61rem;
+
+/* COLORS */
+//blacks and whites
+$black: #001A28;
+$white: #fff;
+$grey--1: #3A3D3F;
+$grey--2: #374E60;
+$grey--3: #9CB2C5;
+$grey--4: #f3f5f8;
+
+//primary color and alterations
+$color--1: #F6B403;
+$color--1a: #c49002;
+$color--1b: #fad87b;
+
+//secondary color and alterations
+$color--2: #006197;
+$color--2a: #094769;
+$color--2b: #77c1e9;
+
+//tertiary color and alterations
+$color--3: #a01d8e;
+$color--3a: #570d4d;
+$color--3b: #e088d5;
+
+//others 
+$color-warning : #f68503;
+$color-error :  #f60b03;
+$color-valid :  #03f64c;
+
+
+/* OTHERS */
