@@ -7,7 +7,7 @@
     width: calc(#{$mobileSidePadding} + (#{$mobileColumnWidth} * (#{$gridEnd} - #{$gridStart})) + (#{$mobileColumnGap} * (#{$gridEnd} - #{$gridStart} - 1)));
 
     @media (min-width: $tabletBP){
-        width: calc(#{$tabletSidePadding} + (#{$tableColumntWidth} * (#{$gridEnd} - #{$gridStart})) + (#{$tabletColumnGap} * (#{$gridEnd} - #{$gridStart} - 1)));    
+        width: calc(#{$tabletSidePadding} + (#{$tWidth} * (#{$gridEnd} - #{$gridStart})) + (#{$tabletColumnGap} * (#{$gridEnd} - #{$gridStart} - 1)));    
     }
  
     @media (min-width: $deskBP){
