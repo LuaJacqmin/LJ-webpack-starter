@@ -52,19 +52,50 @@ In layouts folder you can find layouts I use, including header.scss that is use 
 You can delete "sides" folder entirely.
 You can modify all others files that are in layout folder. Some comments are still in theses files themselves
 
-#### utils
+#### Utils
 1. I use "GlobalClass.scss" for some "!importants" classes that must be prioritised above all other classes
 2. Don't mind "GridOverflow.scss", that is a grid features that must be reworked. You can delete it
 3. Don't modify "Grids.scss". It contains all the mixins I'll talk about later in this readme. Don't modify it either. You can find some comments about the mixins directly in the file.
 4. "Normalize.scss" is the file I use for "normalizing" my elements, but it is really brief so you can either delete or modify it.
 
-#### variables
+#### Variables
 Variables.scss is the file I use to create all the variables I'll use in a project, including colors, fonts, breakpoints and grids. The file is highly commented so you can take a look at these comments
+
+Note that $xlBP is a breakpoint that I use to fixed the width of my layouts when the width of the screen is bigger than this breakpoint.
 
 ### Mixins and others
 In grids.scss, you'll find a lot of mixins I create.
 Here's the list and how they work :
 
 1. Paddings
-  1. 
+=> sidePadding($pad) : add $pad on padding left and right.
+=> topPadding($pad) : add $pad on padding top and bottom.
+=> padding($pad) : add $pad on each padding
+Also, box-sizing is set to border-box, which means padding is included in the total width/height of the element
+
+2. Margins
+=> sideMargin($margin) : add $margin on margin left and right.
+=> topMargin($margin) : add $margin on margin top and bottom.
+=> margin($margin) : add $margin on each margin
+
+3. grid
+=> set width to 100vw
+=> display a grid that take n-number of column, n can be set in variables.scss (deskNmOfColumns, tabletNmOfColumns, mobileNmOfColumns)
+=> display a n-width column and row gap, that can be set in variables.scss (deskColumnGap, deskRowGap, ...)
+=> set a padding on left and right, that can be set in variables.scss (deskSidePadding, tabletsidePadding, ...)
+=> automatically adapts regarding the width of the screen
+
+4. gridColumn($gridStart, $span)
+=> set place of an element on the grid, $gridstart is the column where the element begins and $span the number of columns it takes
+
+5. columnsWidth($numCol)
+=> set the width of an element based on the width of columns, but without being placed on the grid layout.
+
+Example : columnsWidth(6), the element will be 6 columns large but does not need to be in a grid itself
+
+6. columnsWidthPlusOneGap($numCol)
+=> The same as columnsWidth($numCol), but the element will be $numCol columns + $numCol gap large
+
+7. gridWidth($gridStart, $span)
+=> Set a classic grid-column property and make sure the element would take all the width that it could
 
