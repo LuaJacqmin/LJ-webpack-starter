@@ -1,10 +1,11 @@
+/* you can delete me I am just here on aesthetic purpose */
 .colors{
   @include grid;
 
   &__title{
     @include gridWidth(1, 4);
 
-    @media (min-width: $tabletzBP){
+    @media (min-width: $tabletBP){
       @include gridWidth(1, 8);
     }
     
@@ -27,8 +28,8 @@
   }
 
   &__card{
-    @include padding(24);
-    @include topMargin(8);
+    @include padding(24px);
+    @include topMargin(8px);
     @include columnsWidth(2);
     background-color: $white;
     border-radius: 5px;

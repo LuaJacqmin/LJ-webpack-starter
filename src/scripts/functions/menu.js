@@ -1,3 +1,4 @@
+/* menu function that open and close menu*/
 const btn = document.getElementById("menuBTN");
 const header = document.getElementById("header");
 const nav = document.getElementById("nav");

@@ -1,4 +1,5 @@
 /* stylise buttons and other cta here */
+// you can find a blank version of .btn class below
 .btn{
   @include columnsWidth(2);
   height: calc(#{$mobileRowGap} * 3);
@@ -50,3 +51,23 @@
     color: $grey--4;
   }
 }
+
+
+/* blank class version */
+/* 
+.btn{
+  @media (min-width: $tabletBP){
+  }
+  
+  @media (min-width: $deskBP){
+  }
+
+  &:hover{
+  }
+
+  &:active{
+  }
+
+  &:disabled{
+  }
+} */

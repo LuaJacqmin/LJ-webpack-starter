@@ -12,35 +12,35 @@ $mobileColumnWidth : calc(((100vw - (#{$mobileSidePadding} * 2)) - (#{$mobileNmO
 
 /* adding padding on sides. Don't use it with grid mixin */
 @mixin sidePadding($pad){
-    padding-left : $pad + px;
-    padding-right : $pad + px;
+    padding-left : $pad;
+    padding-right : $pad;
     box-sizing: border-box;
 }
 
 @mixin padding($pad){
-    padding : $pad + px;
+    padding : $pad;
     box-sizing: border-box;
 }
 
 @mixin topPadding($pad){
-    padding-top : $pad + px;
-    padding-bottom : $pad + px;
+    padding-top : $pad;
+    padding-bottom : $pad;
     box-sizing: border-box;
 }
 
 
 @mixin sideMargin($margin){
-    margin-left : $margin + px;
-    margin-right : $margin + px;
+    margin-left : $margin;
+    margin-right : $margin;
 }
 
 @mixin topMargin($margin){
-    margin-top : $margin + px;
-    margin-bottom : $margin + px;
+    margin-top : $margin;
+    margin-bottom : $margin;
 }
 
 @mixin margin($margin){
-    margin : $margin + px;
+    margin : $margin;
 }
 
 /* apply a grid based on the mesures you set in GridsVariable.scss */

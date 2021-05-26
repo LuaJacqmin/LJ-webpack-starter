@@ -1,3 +1,9 @@
+/* stylised header. Feel free to change everything you want but be aware that
+.header--open
+.nav--open
+.nav__menuBtn--open 
+are used in scripts/functions/menu.js to open and close menu
+*/
 .header{
   @include grid;
   position: fixed;

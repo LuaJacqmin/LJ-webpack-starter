@@ -29,7 +29,7 @@
   list-style-type: none;
   line-height: 1;
   border: none;
-  background-color: inherit;
+  background-color: transparent;
   font-family: "FogtwoNo5", serif;
 }
 
@@ -316,6 +316,18 @@ body p {
   border-bottom: 2px solid #192112;
 }
 
+/* blank link class versions */
+/* .link{
+
+  &:visited{
+  }
+
+  &:hover{
+  }
+
+  &:active{
+  }
+} */
 /* stylise buttons and other cta here */
 .btn {
   width: calc((calc(((100vw - (15vw * 2)) - (4 - 1) * 24px) / 4) * 2) + (24px * (2 - 1)));
@@ -379,6 +391,25 @@ body p {
   color: #707070;
 }
 
+/* blank class version */
+/* 
+.btn{
+  @media (min-width: $tabletBP){
+  }
+
+  @media (min-width: $deskBP){
+  }
+
+  &:hover{
+  }
+
+  &:active{
+  }
+
+  &:disabled{
+  }
+} */
+/* stylise imgs */
 .wrapper {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -392,6 +423,12 @@ body p {
   min-height: 100vh;
 }
 
+/* stylised header. Feel free to change everything you want but be aware that
+.header--open
+.nav--open
+.nav__menuBtn--open 
+are used in scripts/functions/menu.js to open and close menu
+*/
 .header {
   width: 100vw;
   display: grid;
@@ -877,6 +914,7 @@ body p {
   }
 }
 
+/* you can delete me I am just here on aesthetic purpose */
 .ui__class {
   font-family: "Arial", sans-serif;
   color: #7FA659;
@@ -892,6 +930,7 @@ body p {
   margin-bottom: 48px;
 }
 
+/* you can delete me I am just here on aesthetic purpose */
 .uiTypo {
   width: 100vw;
   display: grid;
@@ -1217,6 +1256,7 @@ body p {
   flex-flow: column;
 }
 
+/* you can delete me I am just here on aesthetic purpose */
 .colors {
   width: 100vw;
   display: grid;
@@ -1567,6 +1607,7 @@ body p {
   background-color: #7aecaa;
 }
 
+/* you can delete me I am just here on aesthetic purpose */
 .buttons {
   width: 100vw;
   display: grid;
@@ -1825,6 +1866,7 @@ body p {
   }
 }
 
+/* you can delete me I am just here on aesthetic purpose */
 .credits {
   width: 100vw;
   display: grid;
@@ -1879,3 +1921,5 @@ body p {
 .invisible {
   display: none;
 }
+
+/* if you just us css and not scss, delete all import above this comment and just write css here instead */

@@ -1,6 +1,7 @@
+/* you can delete me I am just here on aesthetic purpose */
 .uiTypo{
   @include grid;
-  @include topPadding(80);
+  @include topPadding(80px);
   
   &__title{
     @include gridWidth(1, 4);
@@ -16,7 +17,7 @@
   }
 
   &__card{
-    @include padding(24);
+    @include padding(24px);
     background-color: $white;
     border-radius: 5px;
     display: flex;

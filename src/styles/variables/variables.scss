@@ -45,6 +45,7 @@ $color--1: #3F522C;
 $color--1a: #192112;
 $color--1b: #7FA659;
 $color--1c: #3F522C;
+
 //secondary color and alterations
 $color--2: #006197;
 $color--2a: #094769;
@@ -61,10 +62,13 @@ $color--error :  #e75a55;
 $color--valid :  #7aecaa;
 
 /* Grid variables. Feel free to modidy them to fit your design */
+//please dont delete all these variables unless you also delete grids.scss, otherwise it will cause a lot of error due to the fact I use these a lot
+//breakpoints
 $xlBP : 1700px;
 $deskBP : 1000px;
 $tabletBP : 600px;
 
+//column and row gaps that can be changed regarding the size of the device
 $deskColumnGap : 24px;
 $deskRowGap : 16px;
 $tabletColumnGap : 24px;
@@ -72,11 +76,14 @@ $tabletRowGap : 16px;
 $mobileColumnGap : 24px;
 $mobileRowGap : 16px;
 
+
+//side padding that can be changed regarding the size of the device
 $xlSidePadding : calc((100vw - #{$xlBP})/2);
 $deskSidePadding : 10vw; 
 $tabletSidePadding : 10vw;
 $mobileSidePadding : 15vw;
 
+//numbers of columns that can be changed regarding the size of the device
 $deskNmOfColumns : 12;
 $tabletNmOfColumns : 8;
 $mobileNmOfColumns : 4;

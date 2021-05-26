@@ -1,6 +1,8 @@
 /* this function display a visual grid, when you press G on the keyboard */
 /* cette fonction affiche une grille verticale lorsque vous appuyez sur G */
 
+//you can delete this file
+
 //creation et insertion de la grille dans chaque page html
 const createdGrid = document.createElement('div');
 createdGrid.innerHTML = `

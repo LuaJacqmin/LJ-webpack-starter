@@ -1,3 +1,6 @@
+/* Import all files available in SRC folder. Feel free to add extension if you need file types that are not here, but pay attention that you have to change webpack.config.js if you do that */
+//don't delete me !
+
 function importAll (r) {
   r.keys().forEach(r);
 }
