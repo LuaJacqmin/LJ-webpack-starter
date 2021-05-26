@@ -1,35 +1,50 @@
 /* imports */
+@font-face {
+  font-family: "FogtwoNo5";
+  src: url("@/fonts/FogtwoNo5.ttf");
+}
+
+@font-face {
+  font-family: "Silhouetto";
+  src: url("@/fonts/Silhouetto-Script.ttf");
+}
 
 /* FONTS */
-$font--1 : 'Montserrat', sans-serif;
-$font--2 : 'Cinzel Decorative', cursive;
+$font--1 : 'FogtwoNo5', serif;
+$font--2 : 'Silhouetto', cursive;
+$font--ui: 'Arial', sans-serif;
 
 /* FONT SIZE */
 //the ratio is 1.333.
 //you can just chose fontsize-r size and others will adapt automatically
-$fontsize--s : 0.75rem; //12px if $fontsize--regular id 16
-$fontsize--r : 16px;
+//written size  if $fontsize--r id 16
+
+$fontsize--s : 0.75rem; //12px
+$fontsize--r : 20px;
 $fontsize--m : 1.333rem; //21.33px 
 $fontsize--l : 1.777rem; //28.43px
 $fontsize--xl : 2.369rem; //37.90
-$fontsize--xxl : 3.157rem; //50.52
-$fontsize--xxxl: 4.209rem; //67.34px
-$fontsize--huge : 5.61rem;
+$fontsize--2xl : 3.157rem; //50.52
+$fontsize--3xl: 4.209rem; //67.34px
+$fontsize--4xl : 5.61rem; // 89.76px
+$fontsize--5xl: 7.478rem; //119.66px
+$fontsize--6xl: 9.969rem; //159.50px
+
 
 /* COLORS */
 //blacks and whites
 $black: #001A28;
 $white: #fff;
-$grey--1: #3A3D3F;
-$grey--2: #374E60;
-$grey--3: #9CB2C5;
-$grey--4: #f3f5f8;
+$grey--1: #f6f6f6;
+$grey--2: #d6d6d6;
+$grey--3: #b1b1b1;
+$grey--4: #707070;
 
 //primary color and alterations
-$color--1: #F6B403;
-$color--1a: #c49002;
-$color--1b: #fad87b;
-
+$color--1: #3F522C;
+$color--1a: #192112;
+$color--1b: #7FA659;
+$color--1c: #3F522C;
 //secondary color and alterations
 $color--2: #006197;
 $color--2a: #094769;
@@ -41,9 +56,40 @@ $color--3a: #570d4d;
 $color--3b: #e088d5;
 
 //others 
-$color-warning : #f68503;
-$color-error :  #f60b03;
-$color-valid :  #03f64c;
+$color--warning : #e6a55c;
+$color--error :  #e75a55;
+$color--valid :  #7aecaa;
 
+/* Grid variables. Feel free to modidy them to fit your design */
+$xlBP : 1700px;
+$deskBP : 1000px;
+$tabletBP : 600px;
+
+$deskColumnGap : 24px;
+$deskRowGap : 16px;
+$tabletColumnGap : 24px;
+$tabletRowGap : 16px;
+$mobileColumnGap : 24px;
+$mobileRowGap : 16px;
+
+$xlSidePadding : calc((100vw - #{$xlBP})/2);
+$deskSidePadding : 10vw; 
+$tabletSidePadding : 10vw;
+$mobileSidePadding : 15vw;
+
+$deskNmOfColumns : 12;
+$tabletNmOfColumns : 8;
+$mobileNmOfColumns : 4;
 
 /* OTHERS */
+
+//media queries with breakpoint
+/* 
+@media (min-width: $tabletBP){
+
+}
+
+@media (min-width: $deskBP){
+  
+} 
+*/

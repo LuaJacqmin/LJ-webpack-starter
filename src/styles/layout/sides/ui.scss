@@ -1,0 +1,18 @@
+.ui{
+  &__class{
+    font-family: $font--ui;
+    color: $color--1b;
+  }
+
+  &__pg{
+    font-family: $font--ui;
+    color: $black;
+  }
+
+  &__title{
+    font-family: $font--ui;
+    color: $black;
+    font-weight: 400;
+    margin-bottom: 48px;
+  }
+}

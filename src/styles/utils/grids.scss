@@ -1,24 +1,51 @@
 /* dont change these variable, they'll adapt automatically based on mesures available in gridsVariables.scss */
 // calculate the width of each column
-$xlColumnWidth : calc(((100vw - #{$xlSidePadding}*2) - (#{$deskNmOfColumns} - 1) * #{$deskColumnGap}) / #{$deskNmOfColumns});
+$xlColumnWidth : calc(((100vw - (#{$xlSidePadding} * 2)) - (#{$deskNmOfColumns} - 1) * #{$deskColumnGap}) / #{$deskNmOfColumns});
 
-$deskColumnWidth : calc(((100vw - #{$deskSidePadding}*2) - (#{$deskNmOfColumns} - 1) * #{$deskColumnGap}) / #{$deskNmOfColumns});
+$deskColumnWidth : calc(((100vw - (#{$deskSidePadding} * 2)) - (#{$deskNmOfColumns} - 1) * #{$deskColumnGap}) / #{$deskNmOfColumns});
 
-$tableColumntWidth :  calc(((100vw - #{$tabletSidePadding}*2) - (#{$tabletNmOfColumns} - 1) * #{$tabletColumnGap}) / #{$tabletNmOfColumns});
+$tabletColumnWidth :  calc(((100vw - (#{$tabletSidePadding} * 2)) - (#{$tabletNmOfColumns} - 1) * #{$tabletColumnGap}) / #{$tabletNmOfColumns});
 
-$mobileColumnWidth : calc(((100vw - #{$mobileSidePadding}*2) - (#{$mobileNmOfColumns} - 1) * #{$mobileColumnGap}) / #{$mobileNmOfColumns});
+$mobileColumnWidth : calc(((100vw - (#{$mobileSidePadding} * 2)) - (#{$mobileNmOfColumns} - 1) * #{$mobileColumnGap}) / #{$mobileNmOfColumns});
 
 /*------------MIXINS--------------*/
 
 /* adding padding on sides. Don't use it with grid mixin */
-@mixin padding($pad){
+@mixin sidePadding($pad){
     padding-left : $pad + px;
     padding-right : $pad + px;
     box-sizing: border-box;
 }
 
+@mixin padding($pad){
+    padding : $pad + px;
+    box-sizing: border-box;
+}
+
+@mixin topPadding($pad){
+    padding-top : $pad + px;
+    padding-bottom : $pad + px;
+    box-sizing: border-box;
+}
+
+
+@mixin sideMargin($margin){
+    margin-left : $margin + px;
+    margin-right : $margin + px;
+}
+
+@mixin topMargin($margin){
+    margin-top : $margin + px;
+    margin-bottom : $margin + px;
+}
+
+@mixin margin($margin){
+    margin : $margin + px;
+}
+
 /* apply a grid based on the mesures you set in GridsVariable.scss */
 @mixin grid {
+    width: 100vw;
     display: grid;
 
     grid-template-columns: repeat($mobileNmOfColumns, 1fr);
@@ -27,6 +54,7 @@ $mobileColumnWidth : calc(((100vw - #{$mobileSidePadding}*2) - (#{$mobileNmOfCol
 
     padding-left: $mobileSidePadding;
     padding-right: $mobileSidePadding;
+    box-sizing: border-box;
 
     @media (min-width: $tabletBP){
         grid-template-columns: repeat($tabletNmOfColumns, 1fr);
@@ -66,7 +94,7 @@ $mobileColumnWidth : calc(((100vw - #{$mobileSidePadding}*2) - (#{$mobileNmOfCol
     width: calc((#{$mobileColumnWidth} * #{$numCol}) + (#{$mobileColumnGap} * (#{$numCol} - 1)));
 
     @media (min-width: $tabletBP){
-        width: calc((#{$tableColumntWidth} * #{$numCol}) + (#{$tabletColumnGap} * (#{$numCol} - 1)));
+        width: calc((#{$tabletColumnWidth} * #{$numCol}) + (#{$tabletColumnGap} * (#{$numCol} - 1)));
     }
 
     @media (min-width: $deskBP){
@@ -84,7 +112,7 @@ $mobileColumnWidth : calc(((100vw - #{$mobileSidePadding}*2) - (#{$mobileNmOfCol
     width: calc((#{$mobileColumnWidth} * #{$numCol}) + (#{$mobileColumnGap} * #{$numCol}));
 
     @media (min-width: $tabletBP){
-        width: calc((#{$tableColumntWidth} * #{$numCol}) + (#{$tabletColumnGap} * #{$numCol}));
+        width: calc((#{$tabletColumnWidth} * #{$numCol}) + (#{$tabletColumnGap} * #{$numCol}));
     }
 
     @media (min-width: $deskBP){
@@ -99,10 +127,11 @@ $mobileColumnWidth : calc(((100vw - #{$mobileSidePadding}*2) - (#{$mobileNmOfCol
 /* set a classic grid-column + make sure the element takes all the width it could*/
 @mixin gridWidth($gridStart, $span){
     grid-column: $gridStart/ span $span;
-    width: calc((#{$mobileColumnWidth} * #{$span}) + (#{$mobileColumnGap} * (#{$span}) - 1));
+
+    width: calc((#{$mobileColumnWidth} * #{$span}) + (#{$mobileColumnGap} * (#{$span} - 1)));
 
     @media (min-width: $tabletBP){
-        width: calc((#{$tableColumntWidth} * #{$span}) + (#{$tabletColumnGap} * (#{$span} - 1)));
+        width: calc((#{$tabletColumnWidth} * #{$span}) + (#{$tabletColumnGap} * (#{$span} - 1)));
     }
 
     @media (min-width: $deskBP){
@@ -117,8 +146,8 @@ $mobileColumnWidth : calc(((100vw - #{$mobileSidePadding}*2) - (#{$mobileNmOfCol
 /* display visual grid */
 .grid{
     height: 100%;
-    width: 100%;
-    position : absolute;
+    width: 100vw;
+    position : fixed;
     top : 0;
     left : 0;
     pointer-events: none;
@@ -129,10 +158,13 @@ $mobileColumnWidth : calc(((100vw - #{$mobileSidePadding}*2) - (#{$mobileNmOfCol
     animation-fill-mode: forwards;
     animation-timing-function: linear;
 
+    background-color: transparent;
+
     z-index: 300000;
 
     li{
-        background-color: rgb(92, 136, 70);
+        background-color: rgba(84, 95, 199, 0.055);
+        border: 1px solid rgba(84, 96, 199, 0.493);
         list-style-type: none;
         opacity : .5;
     }

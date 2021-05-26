@@ -8,6 +8,7 @@ import '#/config/grids.js'
 
 //functions
 import'#/functions/hello.js'
+import'#/functions/menu.js'
 
 /* import your files below */
 

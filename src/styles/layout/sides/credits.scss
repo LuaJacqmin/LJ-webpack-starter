@@ -1,0 +1,15 @@
+.credits{
+  @include grid;
+
+  &__card{
+    @include gridColumn(1, 4);
+
+    @media (min-width: $tabletBP){
+      @include gridColumn(1, 8);
+    }
+    
+    @media (min-width: $deskBP){
+      @include gridColumn(1, 12);
+    }
+  }
+}

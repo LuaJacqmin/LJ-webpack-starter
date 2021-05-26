@@ -1,8 +1,6 @@
 const path = require('path') /* permet de résoudre un chemin relatif en chemin absolu */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')/* extrait le css dans son propre fichier */
 const {CleanWebpackPlugin} = require('clean-webpack-plugin') /* efface les anciens fichiers lors du dev ou du build */
-const UglifyJSP = require('uglify-js-plugin')
-const DashboardPlugin = require("webpack-dashboard/plugin");
 
 const dev = process.env.NODE_ENV === "dev"; //pour effectuer certaines actions seulement si on est en dev
 
@@ -10,7 +8,7 @@ let CSSloaders = [
   {
     loader: MiniCssExtractPlugin.loader,
     options: {
-      /* publicPath: dev ? './' : './', */
+      publicPath:'../',
     },
   },
   {
@@ -81,7 +79,23 @@ let config = {
         type: 'asset/resource'
       },
       {
+        test:  /\.(ttf|otf|woff|woff2)$/i,
+        type: 'asset/resource'
+      },
+      {
         test: /\.html$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name:  '[folder]/[name].[ext]',
+              outputPath: './',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.php$/i,
         use: [
           {
             loader: 'file-loader',
@@ -99,12 +113,7 @@ let config = {
     new MiniCssExtractPlugin({
       filename:'styles/main.css'
     }),
-    new DashboardPlugin()
   ],
-}
-
-if(!dev){
-  config.plugins.push(new UglifyJSP())
 }
 
 module.exports = config;
