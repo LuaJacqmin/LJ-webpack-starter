@@ -18,7 +18,7 @@ are used in scripts/functions/menu.js to open and close menu
   background-color: transparent;
 
   &--open{
-    background-color: $color--1a;
+    background-color: $color--1darker;
     pointer-events: initial;
   }
 
@@ -108,7 +108,7 @@ are used in scripts/functions/menu.js to open and close menu
       &::after{
         width: 35px;
         height: 35px;
-        border: 1px solid $color--1b;
+        border: 1px solid $color--1lighter;
       }
     }
     
@@ -134,7 +134,7 @@ are used in scripts/functions/menu.js to open and close menu
     }
   
     &:visited{
-      color: $color--1b;
+      color: $color--1lighter;
     }
   
     &:hover{
@@ -142,11 +142,11 @@ are used in scripts/functions/menu.js to open and close menu
     }
   
     &:active{
-      color: $color--1b;
+      color: $color--1lighter;
   
       &::before{
         width: 100%;
-        border-bottom: 2px solid $color--1b;
+        border-bottom: 2px solid $color--1lighter;
       }
     }
   

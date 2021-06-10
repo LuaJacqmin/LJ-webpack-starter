@@ -34,27 +34,30 @@ $fontsize--6xl: 9.969rem; //159.50px
 /* COLORS */
 //blacks and whites
 $black: #001A28;
-$white: #fff;
-$grey--1: #f6f6f6;
-$grey--2: #d6d6d6;
-$grey--3: #b1b1b1;
-$grey--4: #707070;
+$white: rgb(245, 245, 245);
+$grey--1: darken($white, 3%);
+$grey--2: darken($white, 10%);
+$grey--3: darken($white, 30%);
+$grey--4: darken($white, 50%);
 
 //primary color and alterations
 $color--1: #3F522C;
-$color--1a: #192112;
-$color--1b: #7FA659;
-$color--1c: #3F522C;
+$color--1darker: darken($color--1, 15%);
+$color--1lighter: lighten($color--1, 50%);
+$color--1saturate: saturate($color--1, 80%); //sometime base color is already 100% saturate. you can try desaturate instead of saturate function
 
 //secondary color and alterations
-$color--2: #006197;
-$color--2a: #094769;
-$color--2b: #77c1e9;
+$color--2: #247eaf;
+$color--2darker: darken($color--2, 15%);
+$color--2lighter: lighten($color--2, 50%);
+$color--2saturate: saturate($color--2, 80%); 
+
 
 //tertiary color and alterations
 $color--3: #a01d8e;
-$color--3a: #570d4d;
-$color--3b: #e088d5;
+$color--3darker:  darken($color--3, 15%);
+$color--3lighter: lighten($color--3, 50%);
+$color--3saturate: saturate($color--3, 80%);
 
 //others 
 $color--warning : #e6a55c;

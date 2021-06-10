@@ -1,29 +1,29 @@
 /* SCSS imports */
-@import '-/variables/variables.scss';
-@import '-/utils/normalize.scss';
-@import '-/utils/grids.scss';
+@import 'variables/variables';
+@import 'utils/normalize';
+@import 'utils/grids';
 
 
 /* import your style files below */
 //all components files
-@import '-/components/texts.scss';
-@import '-/components/btn.scss';
-@import '-/components/img.scss';
+@import 'components/texts';
+@import 'components/btn';
+@import 'components/img';
 
 //all layout files
-@import '-/layout/wrapper.scss';
-@import '-/layout/header.scss';
-@import '-/layout/hero.scss';
+@import 'layout/wrapper';
+@import 'layout/header';
+@import 'layout/hero';
 
 //side pages layout. You can remove it if you want to
-@import '-/layout/sides/ui.scss';
-@import '-/layout/sides/typos.scss';
-@import '-/layout/sides/colors.scss';
-@import '-/layout/sides/buttons.scss';
-@import '-/layout/sides/credits.scss';
+@import 'layout/sides/ui';
+@import 'layout/sides/typos';
+@import 'layout/sides/colors';
+@import 'layout/sides/buttons';
+@import 'layout/sides/credits';
 
 
 /* make sure this import stayed below all */
-@import '-/utils/globalClass.scss';
+@import 'utils/globalClass';
 
 /* if you just us css and not scss, delete all import above this comment and just write css here instead */
