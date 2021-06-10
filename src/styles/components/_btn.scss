@@ -3,9 +3,9 @@
 .btn{
   @include columnsWidth(2);
   height: calc(#{$mobileRowGap} * 3);
-  background-color: $color--1b;
+  background-color: $color--1lighter;
   font-size: $fontsize--r;
-  color: $color--1a;
+  color: $color--1darker;
 
   transition: .2s all ease-in;
   cursor: pointer;
@@ -19,12 +19,12 @@
   }
 
   &:hover{
-    background-color: $color--1c;
-    color: $color--1b;
+    background-color: $color--1saturate;
+    color: $color--1lighter;
   }
 
   &:active{
-    background-color: $color--1a;
+    background-color: $color--1darker;
     color: $white;
   }
 
@@ -36,12 +36,12 @@
 
   /* just for UI KIT */
   &--hover{
-    background-color: $color--1c;
-    color: $color--1b;
+    background-color: $color--1saturate;
+    color: $color--1lighter;
   }
 
   &--active{
-    background-color: $color--1a;
+    background-color: $color--1darker;
     color: $white;
   }
 

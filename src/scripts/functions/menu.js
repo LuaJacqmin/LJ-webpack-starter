@@ -1,11 +1,8 @@
 /* menu function that open and close menu*/
-const btn = document.getElementById("menuBTN");
-const header = document.getElementById("header");
-const nav = document.getElementById("nav");
-
-
-btn.addEventListener('click', (e) =>{
-  header.classList.toggle('header--open')
-  nav.classList.toggle('nav--open')
-  btn.classList.toggle('nav__menuBtn--open')
+document.addEventListener('click', (e) =>{
+  if(e.target.id === "menuBTN"){
+    document.getElementById("header").classList.toggle('header--open') //open header
+    document.getElementById("nav").classList.toggle('nav--open') //open nav
+    e.target.classList.toggle('nav__menuBtn--open') //change text color of button
+  }
 })

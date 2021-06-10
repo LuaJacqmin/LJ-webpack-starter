@@ -5,7 +5,7 @@ body{
   font-size: $fontsize--r;
   background-color: $grey--1;
   line-height: 1.4;
-  color: $color--1a;
+  color: $color--1darker;
 
   p{
     @include topMargin(8px)
@@ -51,14 +51,14 @@ body{
   }
 
   &--sub{
-    color: $color--1c;
+    color: $color--1saturate;
   }
 }
 
 /* TEXT */
 .pg{
   &--alternate{
-    color: $color--1b;
+    color: $color--1lighter;
   }
 }
 
@@ -73,7 +73,7 @@ body{
   height: fit-content;
   font-size: $fontsize--r;
   font-weight: 700;
-  color: $color--1b;
+  color: $color--1lighter;
   position: relative;
 
   transition: transform .2s linear;
@@ -86,17 +86,17 @@ body{
     top: 100%;
     left: 0;
   
-    border-bottom: 2px solid $color--1b;
+    border-bottom: 2px solid $color--1lighter;
     transition: width .2s ease-in;
   }
 
   &:visited{
-    color: $color--1c;
+    color: $color--1saturate;
   }
 
   &:hover{
     transform: scale(1.05);
-    color: $color--1b;
+    color: $color--1lighter;
     
     &::before{
       width: 100%;
@@ -105,23 +105,23 @@ body{
 
   &:active{
     transform: scale(1.2);
-    color: $color--1a;
+    color: $color--1darker;
 
     &::before{
       width: 100%;
-      border-bottom: 2px solid $color--1a;
+      border-bottom: 2px solid $color--1darker;
     }
   }
 
 
   /* just for ui KIT */
   &--visited{
-    color: $color--1c;
+    color: $color--1saturate;
   }
 
   &--hover{
     transform: scale(1.05);
-    color: $color--1b;
+    color: $color--1lighter;
     
     &::before{
       width: 100%;
@@ -130,11 +130,11 @@ body{
 
   &--active{
     transform: scale(1.2);
-    color: $color--1a;
+    color: $color--1darker;
 
     &::before{
       width: 100%;
-      border-bottom: 2px solid $color--1a;
+      border-bottom: 2px solid $color--1darker;
     }
   }
 

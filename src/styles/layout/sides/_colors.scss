@@ -36,6 +36,7 @@
 
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
   }
 
   &__palette{
@@ -135,40 +136,48 @@
     background-color: $color--1;
   }
 
-  &__color--1a{
-    background-color: $color--1a;
+  &__color--1darker{
+    background-color: $color--1darker;
   }
 
-  &__color--1b{
-    background-color: $color--1b;
+  &__color--1lighter{
+    background-color: $color--1lighter;
   }
 
-  &__color--1c{
-    background-color: $color--1c;
+  &__color--1saturate{
+    background-color: $color--1saturate;
   }
 
   &__color--2{
     background-color: $color--2;
   }
 
-  &__color--2a{
-    background-color: $color--2a;
+  &__color--2darker{
+    background-color: $color--2darker;
   }
 
-  &__color--2b{
-    background-color: $color--2b;
+  &__color--2lighter{
+    background-color: $color--2lighter;
+  }
+
+  &__color--2saturate{
+    background-color: $color--2saturate;
   }
 
   &__color--3{
     background-color: $color--3;
   }
 
-  &__color--3a{
-    background-color: $color--3a;
+  &__color--3darker{
+    background-color: $color--3darker;
   }
 
-  &__color--3b{
-    background-color: $color--3b;
+  &__color--3lighter{
+    background-color: $color--3lighter;
+  }
+
+  &__color--3saturate{
+    background-color: $color--3saturate;
   }
 
   &__color--warning{
