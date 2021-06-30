@@ -5,7 +5,7 @@ Also you can work with php files
 
 ## Installation
 1. Clone the repository with the method of your choice
-2. Remove the .git folder, .gitignore and .gitattributes files
+2. Remove the .git folder and .gitattributes files
 3. Go to your local copy
 4. Use "npm i" to install all needed dependencies
 5. Open webpack server by using "npm run dev" or build and minify your work by using "npm tun build". Please be aware that you may need to manually reload the first time you use webpack server
