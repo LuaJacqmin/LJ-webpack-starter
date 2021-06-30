@@ -63,7 +63,7 @@ let config = {
         use: [...CSSloaders, 'sass-loader']
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|ico)$/i,
         type: 'asset/resource'
       },
       {
@@ -83,19 +83,7 @@ let config = {
         type: 'asset/resource'
       },
       {
-        test: /\.html$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name:  '[folder]/[name].[ext]',
-              outputPath: './',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.php$/i,
+        test: /\.(html|php)$/i,
         use: [
           {
             loader: 'file-loader',
