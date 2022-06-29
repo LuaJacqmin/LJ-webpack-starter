@@ -1,73 +1,25 @@
-/* stylise buttons and other cta here */
-// you can find a blank version of .btn class below
 .btn{
-  @include columnsWidth(2);
-  height: calc(#{$mobileRowGap} * 3);
-  background-color: $color--1lighter;
-  font-size: $fontsize--r;
-  color: $color--1darker;
+    font-family: $font-second;
+    font-size: $fs-r;
+    padding: 8px 12px;
 
-  transition: .2s all ease-in;
-  cursor: pointer;
+    background: var(--color-btn);
 
-  @media (min-width: $tabletBP){
-    height: calc(#{$tabletRowGap} * 3);
-  }
-  
-  @media (min-width: $deskBP){
-    height: calc(#{$deskRowGap} * 3);
-  }
+    outline: transparent;
+    cursor: pointer;
 
-  &:hover{
-    background-color: $color--1saturate;
-    color: $color--1lighter;
-  }
+    transition: .3s all ease-out;
 
-  &:active{
-    background-color: $color--1darker;
-    color: $white;
-  }
+    &:hover{
+        --color-btn: #{$clr-third-50}
+    }
 
-  &:disabled{
-    pointer-events: none;
-    background-color: $grey--3;
-    color: $grey--4;
-  }
+    &:active{
+        transform: translateY(-5px);
+    }
 
-  /* just for UI KIT */
-  &--hover{
-    background-color: $color--1saturate;
-    color: $color--1lighter;
-  }
-
-  &--active{
-    background-color: $color--1darker;
-    color: $white;
-  }
-
-  &--disabled{
-    pointer-events: none;
-    background-color: $grey--3;
-    color: $grey--4;
-  }
+    &:disabled{
+        --color-btn: #{$grey-2};
+        pointer-events: none;
+    }
 }
-
-
-/* blank class version */
-/* 
-.btn{
-  @media (min-width: $tabletBP){
-  }
-  
-  @media (min-width: $deskBP){
-  }
-
-  &:hover{
-  }
-
-  &:active{
-  }
-
-  &:disabled{
-  }
-} */

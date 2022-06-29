@@ -1,105 +1,108 @@
 /* imports */
 @font-face {
-  font-family: "FogtwoNo5";
-  src: url("@/fonts/FogtwoNo5.ttf");
+    font-family: "Matiot";
+    src: url("@/fonts/matiot.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "Silhouetto";
-  src: url("@/fonts/Silhouetto-Script.ttf");
+    font-family: "Overpass";
+    src:url("@/fonts/Overpass-VariableFont_wght.ttf") format("ttf"),
+
+}
+
+@font-face {
+    font-family: "Fog";
+    src:url("@/fonts/FogtwoNo5.otf") format("opentype"),
+
 }
 
 /* FONTS */
-$font--1 : 'FogtwoNo5', serif;
-$font--2 : 'Silhouetto', cursive;
-$font--ui: 'Arial', sans-serif;
+$font-prim: 'Matiot', 'Overpass';
+$font-second: 'Overpass', sans-serif;
+$font-third: 'Fog', serif;
 
 /* FONT SIZE */
 //the ratio is 1.333.
-//you can just chose fontsize-r size and others will adapt automatically
-//written size  if $fontsize--r id 16
-
-$fontsize--s : 0.75rem; //12px
-$fontsize--r : 20px;
-$fontsize--m : 1.333rem; //21.33px 
-$fontsize--l : 1.777rem; //28.43px
-$fontsize--xl : 2.369rem; //37.90
-$fontsize--2xl : 3.157rem; //50.52
-$fontsize--3xl: 4.209rem; //67.34px
-$fontsize--4xl : 5.61rem; // 89.76px
-$fontsize--5xl: 7.478rem; //119.66px
-$fontsize--6xl: 9.969rem; //159.50px
-
+//you can just chose fs-r size and others will adapt automatically
+$fs-s : 0.75rem;
+$fs-r : 20px;
+$fs-m : 1.333rem;
+$fs-l : 1.777rem;
+$fs-xl : 2.369rem;
+$fs-2xl : 3.157rem;
+$fs-3xl: 4.209rem;
+$fs-4xl : 5.61rem;
+$fs-5xl: 7.478rem;
+$fs-6xl: 9.969rem;
 
 /* COLORS */
 //blacks and whites
 $black: #001A28;
 $white: rgb(245, 245, 245);
-$grey--1: darken($white, 3%);
-$grey--2: darken($white, 10%);
-$grey--3: darken($white, 30%);
-$grey--4: darken($white, 50%);
+$grey-1: darken($white, 3%);
+$grey-2: darken($white, 10%);
+$grey-3: darken($white, 30%);
+$grey-4: darken($white, 50%);
 
 //primary color and alterations
-$color--1: #3F522C;
-$color--1darker: darken($color--1, 15%);
-$color--1lighter: lighten($color--1, 50%);
-$color--1saturate: saturate($color--1, 80%); //sometime base color is already 100% saturate. you can try desaturate instead of saturate function
+$clr-prim: #415495;
+$clr-prim--darker: #2A3660;
+$clr-prim--lighter: #E2E6F3;
+$clr-prim--saturated: #0030D6;
+//----
+$clr-prim-10: #13182B;
+$clr-prim-20: #222C4E;
+$clr-prim-30: #324072;
+$clr-prim-40: #415495;
+$clr-prim-50: #556AB5;
+$clr-prim-60: #7889C4;
+$clr-prim-70: #9CA8D4;
+$clr-prim-80: #BFC7E3;
+$clr-prim-90: #E3E6F3;
 
 //secondary color and alterations
-$color--2: #247eaf;
-$color--2darker: darken($color--2, 15%);
-$color--2lighter: lighten($color--2, 50%);
-$color--2saturate: saturate($color--2, 80%); 
-
+$clr-second: #FFBD46;
+$clr-second--darker: #F9A000;
+$clr-second--lighter: #FFF4DF;
+$clr-second--saturated: #FFBD46;
+//----
+$clr-second-10: #472E00;
+$clr-second-20: #7A4F00;
+$clr-second-30: #AD7000;
+$clr-second-40: #E09000;
+$clr-second-50: #FFAB14;
+$clr-second-60: #FFBD46;
+$clr-second-70: #FFD07A;
+$clr-second-80: #FFE2AD;
+$clr-second-90: #FFF4E0;
 
 //tertiary color and alterations
-$color--3: #a01d8e;
-$color--3darker:  darken($color--3, 15%);
-$color--3lighter: lighten($color--3, 50%);
-$color--3saturate: saturate($color--3, 80%);
+$clr-third: #75D2C0;
+$clr-third--darker: #3EBDA4;
+$clr-third--lighter: #D9F2ED;
+$clr-third--saturated: #48FFDC;
+//----
+$clr-third-10: #12362F;
+$clr-third-20: #1E5C50;
+$clr-third-30: #2B8372;
+$clr-third-40: #37A993;
+$clr-third-50: #4EC5AE;
+$clr-third-60: #75D2C0;
+$clr-third-70: #9BDED1;
+$clr-third-80: #C1EBE3;
+$clr-third-90: #E8F7F4;
 
 //others 
-$color--warning : #e6a55c;
-$color--error :  #e75a55;
-$color--valid :  #7aecaa;
+$clr-warning : #e6a55c;
+$clr-error :  #e75a55;
+$clr-valid :  #7aecaa;
 
-/* Grid variables. Feel free to modidy them to fit your design */
-//please dont delete all these variables unless you also delete grids.scss, otherwise it will cause a lot of error due to the fact I use these a lot
 //breakpoints
-$xlBP : 1700px;
-$deskBP : 1000px;
-$tabletBP : 600px;
-
-//column and row gaps that can be changed regarding the size of the device
-$deskColumnGap : 24px;
-$deskRowGap : 16px;
-$tabletColumnGap : 24px;
-$tabletRowGap : 16px;
-$mobileColumnGap : 24px;
-$mobileRowGap : 16px;
-
-
-//side padding that can be changed regarding the size of the device
-$xlSidePadding : calc((100vw - #{$xlBP})/2);
-$deskSidePadding : 10vw; 
-$tabletSidePadding : 10vw;
-$mobileSidePadding : 15vw;
-
-//numbers of columns that can be changed regarding the size of the device
-$deskNmOfColumns : 12;
-$tabletNmOfColumns : 8;
-$mobileNmOfColumns : 4;
-
-/* OTHERS */
-
-//media queries with breakpoint
-/* 
-@media (min-width: $tabletBP){
-
-}
-
-@media (min-width: $deskBP){
-  
-} 
-*/
+$bp-xxs: 480px;
+$bp-xs: 600px;
+$bp-s: 720px;
+$bp-m: 840px;
+$bp-l: 960px;
+$bp-xl: 1080px;
+$bp-xxl: 1200px;
+$bp-xxxl: 1320px;

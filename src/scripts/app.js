@@ -3,12 +3,15 @@ import '-/main.scss'
 
 /* js import */
 //config
-import '#/config/importFiles.js' //you cant remove this one either
-import '#/config/grids.js' // but you can remove this one
+import '#/config/importFiles.js' //DO NOT REMOVE THIS
+
+//utils
+import'#/utils/grids.js' //delete if you dont use grid
 
 //functions
-import'#/functions/hello.js'
-import'#/functions/menu.js' //a usefull menu function
+import'#/functions/menu.js'
+import'#/functions/forms.js'
+import'#/functions/slider.js'
 
 /* import your files below */
 

@@ -37,31 +37,29 @@
   <meta property="twitter:image" content="./assets/logo/meta-img.png">
 </head>
 <body data-page="1">
-  <header id="header" class="header">
-    <h1 class="title header__title header__logo"><a class="header__linkLogo" href="./index.html">WPT</a></h1>
-    <button id="menuBTN" class="nav__menuBtn">Menu</button>
-    <nav id="nav" class="nav">
-      <ul class="nav__list">
-        <li class="nav__items"><a class="link nav__link" href="index.html">Home</a></li>
-        <li class="nav__items"><a class="link nav__link" href="uikit.html">UI kit</a></li>
-        <li class="nav__items"><a class="link nav__link" href="credits.html">Credits</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header class="header">
+    <h1 class="logo header__logo"><a class="logo__link" href="<?php echo home_url()?>"><?php wp_title() ?></a></h1>
+    <div class="header_menu menu">
+        <nav class="menu__nav">
+          <ul class="menu__list list list--numbers">
+            <li><a href="./" class="link">this is a fake menu</a></li>
+            <li><a href="./" class="link">this is a fake menu</a></li><li><a href="./" class="link">this is a fake menu</a></li>
+          </ul>
+        </nav>
+        <button class="btn menu__btn">Menu</button>
+    </div>
+</header>
+
   <main>
-    <section class="wrapper wrapper--full">
-      <div class="hero">
-        <h2 class="title title--centered hero__title">Welcome !</h2>
-        <div class="hero__images">
-          <img class="hero__img" src="assets/img/work-1.jpg" alt="">
-          <img class="hero__img" src="assets/img/work.jpg" alt="">
-          <img class="hero__img" src="assets/img/work-2.jpg" alt="">
-        </div>
-        <p class="hero__pg">Please <a class="link" href="https://github.com/LuaJacqmin/webpack-project-template-LJ#readme" target="_blank" rel="noopener noreferrer">read the doc</a> and have fun</p>
-        <p class="hero__pg">Also, check out the <a class="link" href="uikit.html" target="_blank" rel="noopener noreferrer">UI kit</a></p>
-      </div>
-    </section>
+    <section class="hero">
+      <!-- <h2 class="title"> <?php the_title() ?></h2> -->
+      <h2 class="title hero__title">Welcome, young adventurer !</h2>
+      <p>Hope you'll have fun using my starter theme</p>
+  </section>
   </main>
+  <footer class="footer">
+    <p class="footer__copy">Made with passion by [you] - [year]</p>
+</footer>
 </body>
 <script id="scriptTag" src="./scripts/bundle.js"></script>
 </html>

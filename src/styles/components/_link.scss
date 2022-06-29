@@ -1,0 +1,39 @@
+.link{
+    display: inline-block;
+    color: var(--color-link);
+    font-weight: 700;
+
+    transition: .3s all ease-out;
+
+    &:hover{
+        --color-link: #{$clr-third}
+    }
+
+    &:active{
+        transform: translateY(-3px);
+    }
+
+    &:visited{
+        --color-link: #{$clr-second--darker};
+    }
+}
+
+.external-link{
+    display: inline-block;
+    color: var(--color-link-external);
+    font-weight: 700;
+
+    transition: .3s all ease-out;
+
+    &:hover{
+        --color-link-external: #{$clr-third}
+    }
+
+    &:active{
+        transform: translateY(-3px);
+    }
+
+    &:visited{
+        --color-link-external: #{$clr-prim--darker};
+    }
+}

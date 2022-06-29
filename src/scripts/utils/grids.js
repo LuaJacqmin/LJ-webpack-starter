@@ -2,7 +2,6 @@
 /* cette fonction affiche une grille verticale lorsque vous appuyez sur G */
 
 //you can delete this file
-
 //creation et insertion de la grille dans chaque page html
 const createdGrid = document.createElement('div');
 createdGrid.innerHTML = `
@@ -41,14 +40,12 @@ createdGrid.classList.add('invisible')
 createdGrid.id = "grid"
 
 document.body.appendChild(createdGrid)
-console.log(createdGrid)
 
 //function display de la grille
-const grid = document.getElementById('grid');
+const grid = document.querySelector('#grid');
 
 window.addEventListener('keydown', e =>{
     if(e.key == "g"){
-      grid.classList.toggle('invisible')
+        grid.classList.toggle('invisible')
     }
-
 })
